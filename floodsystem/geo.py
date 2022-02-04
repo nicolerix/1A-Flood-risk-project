@@ -22,3 +22,13 @@ def stations_by_distance(stations, p):
     tuples = list(zip(names, distance))
     tuples = sorted_by_key(tuples,1)
     return tuples
+
+def stations_within_radius(stations, centre, r):
+    stations = build_station_list()
+    names = []
+    for station in stations:
+        if haversine(centre, station.coord) <= r:
+            names.append(station.name)
+        else:
+            pass
+    return names
