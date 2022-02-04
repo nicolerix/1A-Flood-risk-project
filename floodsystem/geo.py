@@ -12,15 +12,13 @@ from . import datafetcher
 from .station import MonitoringStation
 from floodsystem.stationdata import build_station_list
 
-
-distance = haversine(p, station.coord)
-
 def stations_by_distance(stations, p):
     stations = build_station_list()
+    names = []
+    distance = []
     for station in stations:
-        names.append()
-        #coords = MonitoringStation.coord
-        distance.append()
-    turples = list(zip(names, distance))
-    turples = sorted_by_key(turples, 1)
-    return turples
+        names.append(station.name)
+        distance.append(haversine(p, station.coord))
+    tuples = list(zip(names, distance))
+    tuples = sorted_by_key(tuples,1)
+    return tuples
