@@ -34,12 +34,17 @@ def stations_within_radius(stations, centre, r):
             pass
     return names
 
-
+# Names of rivers with the greatest number of monitoring stations 
 def rivers_by_station_number(stations, N):
-    stations = build_station_list()
+    stations = list(MonitoringStation)
     names= []
+    for station in stations 
 
-# list of station objects that returns a set with names of the rivers with a monitoring station 
+    return
+
+
+# list of station objects that returns a set with name of the rivers with a monitoring station 
+
 def rivers_with_station(stations):
     stationRivers= set()
     for station in stations:
@@ -53,4 +58,10 @@ def stations_by_river(stations):
     riversStations = {} #empty dictionary 
     for stations in stations:
         if not station.river in riversStations: 
-            riversStations.update({station.river: list})
+            riversStations.update({stations.river: list})
+            #add item to the dictionary if it doesnt exist  
+        else:
+            riversStations[station.river] = list(riversStations)
+            #if it does exist add station name to the  
+
+    for station in stationRivers: 
