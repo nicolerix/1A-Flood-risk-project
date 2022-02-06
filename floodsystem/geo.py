@@ -40,7 +40,8 @@ def rivers_by_station_number(stations, N):
     names= []
     for station in stations 
 
-    return
+
+    return names 
 
 
 # list of station objects that returns a set with name of the rivers with a monitoring station 
