@@ -38,7 +38,8 @@ def stations_within_radius(stations, centre, r):
 def rivers_by_station_number(stations, N):
     stations = list(MonitoringStation)
     names= []
-    for station in stations 
+    for station in stations:
+        pass 
 
 
     return names 
